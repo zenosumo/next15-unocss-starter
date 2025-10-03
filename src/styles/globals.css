@@ -1,0 +1,17 @@
+/**
+ * Global CSS Entry Point
+ * Load order: tokens → themes → base → utilities
+ */
+
+@layer tokens;
+@layer theme;
+@layer base;
+@layer utilities;
+
+/* Import in strict cascade order */
+@import url('./tokens.css') layer(tokens);
+@import url('./themes.css') layer(theme);
+@import url('./base.css') layer(base);
+
+/* UnoCSS directives */
+@unocss;

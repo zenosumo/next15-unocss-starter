@@ -1,0 +1,31 @@
+/**
+ * Runtime Theme Mapping
+ * Maps design tokens to stable semantic variables
+ * Prefix: --sys-* for system-level semantic variables
+ */
+
+:root {
+  /* Layout */
+  --sys-fg: var(--color-foreground);
+  --sys-bg: var(--color-background);
+  --sys-content: var(--color-content-1);
+  --sys-border: var(--color-divider);
+
+  /* Links */
+  --sys-link: var(--color-link);
+  --sys-link-hover: var(--color-link-hover);
+  --sys-link-visited: var(--color-link-visited);
+
+  /* Semantic shortcuts */
+  --sys-accent: var(--color-primary-400);
+  --sys-success: var(--color-success-400);
+  --sys-warning: var(--color-warning-400);
+  --sys-danger: var(--color-danger-400);
+
+  /* Typography */
+  --sys-font-sans: var(--font-source-sans, "Source Sans 3"), "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --sys-font-code: 'SF Mono', 'Monaco', var(--font-jetbrains-mono, 'JetBrains Mono'), 'Fira Code', 'Fira Mono', 'Courier New', monospace;
+  --sys-font-mono: var(--font-jetbrains-mono, 'JetBrains Mono'), 'SF Mono', 'Monaco', 'Fira Code', 'Fira Mono', 'Courier New', monospace;
+}
+
+/* Future: Add [data-theme="light"] when light colors are added to color-system.json */

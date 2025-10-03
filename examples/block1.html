@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Three Blocks Layout + Vector Waves</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body
+        class="relative min-h-screen flex flex-col items-center justify-start text-white bg-gradient-to-br from-slate-900 to-gray-900"
+    >
+        <!-- Vector Waves Pattern (background layer) -->
+        <svg
+            class="pointer-events-none absolute inset-0 h-full w-full opacity-20"
+            aria-hidden="true"
+        >
+            <defs>
+                <pattern
+                    id="wavePattern"
+                    x="0"
+                    y="0"
+                    width="160"
+                    height="80"
+                    patternUnits="userSpaceOnUse"
+                >
+                    <path
+                        d="M0 40 C 20 10, 40 10, 60 40 S 100 70, 120 40 S 160 10, 180 40"
+                        fill="none"
+                        stroke="rgb(30,41,59)"
+                        stroke-width="2"
+                    />
+                    <path
+                        d="M0 60 C 20 30, 40 30, 60 60 S 100 90, 120 60 S 160 30, 180 60"
+                        fill="none"
+                        stroke="rgb(51,65,85)"
+                        stroke-width="1"
+                    />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#wavePattern)" />
+        </svg>
+
+        <!-- Page Container (centers blocks, shared width logic) -->
+        <div
+            class="relative flex flex-col flex-1 w-[min(92vw,900px)] mx-auto gap-4 p-4"
+        >
+            <!-- BlockA (Yellow) -->
+            <div
+                class="h-40 bg-yellow-400 border-4 border-yellow-600 w-full mx-auto flex items-start p-4"
+            >
+                <div class="text-black font-medium">
+                    BlockA — top aligned content
+                </div>
+            </div>
+
+            <!-- BlockB (Sky Blue, expands) -->
+            <div
+                class="flex-1 bg-sky-400 border-4 border-sky-600 w-full mx-auto p-4"
+            >
+                <div class="text-black space-y-2 font-medium">
+                    <p>
+                        BlockB — expands to fill remaining space; page grows if
+                        content is large.
+                    </p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Dummy item 1</li>
+                        <li>Dummy item 2</li>
+                        <li>Dummy item 3</li>
+                        <li>Dummy item 4</li>
+                        <li>Dummy item 5</li>
+                        <li>Dummy item 1</li>
+                        <li>Dummy item 2</li>
+                        <li>Dummy item 3</li>
+                        <li>Dummy item 4</li>
+                        <li>Dummy item 5</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BlockC (Green, bottom) -->
+            <div
+                class="h-24 bg-green-400 border-4 border-green-600 w-full mx-auto flex items-center justify-center"
+            >
+                <div class="text-black font-medium">
+                    BlockC — pinned to bottom when B is minimal
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

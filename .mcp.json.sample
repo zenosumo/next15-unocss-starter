@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "ElevenLabs": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--with",
+        "elevenlabs==2.15.1",
+        "elevenlabs-mcp"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "<sample-api-key>"
+      }
+    },
+    "firecrawl": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firecrawl-mcp"
+      ],
+      "env": {
+        "FIRECRAWL_API_KEY": "<sample-api-key>"
+      }
+    }
+  }
+}

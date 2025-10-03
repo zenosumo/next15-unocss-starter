@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__browsermcp__browser_press_key",
+      "mcp__browsermcp__browser_wait",
+      "mcp__browsermcp__browser_snapshot",
+      "mcp__browsermcp__browser_get_console_logs",
+      "mcp__browsermcp__browser_screenshot",
+      "mcp__context7__get-library-docs",
+      "mcp__context7__resolve-library-id",
+      "WebSearch",
+      "mcp__ElevenLabs__play_audio",
+      "mcp__ElevenLabs__text_to_speech",
+      "Bash"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["firecrawl", "ElevenLabs"],
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run $CLAUDE_PROJECT_DIR/.claude/hooks/user_prompt_submit.py",
+            "timeout": 40
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run $CLAUDE_PROJECT_DIR/.claude/hooks/stop.py",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

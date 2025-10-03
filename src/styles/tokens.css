@@ -1,0 +1,332 @@
+/**
+ * Design Tokens
+ * Manually maintained - includes core color system and terminal interface tokens
+ */
+
+:root {
+  --color-foreground: #fffdf4;
+  --color-background: #262625;
+  --color-content-1: #231616;
+  --color-content-2: #2a1b1b;
+  --color-content-3: #312020;
+  --color-content-4: #382525;
+  --color-divider: rgba(255, 255, 255, 0.15);
+  --color-link: #cc6612;
+  --color-link-hover: #e07315;
+  --color-link-visited: #a35310;
+  --color-neutral-base: #312d2d;
+  --color-neutral-50: #1b1818;
+  --color-neutral-100: #322f2f;
+  --color-neutral-200: #4d4747;
+  --color-neutral-300: #655d5d;
+  --color-neutral-400: #7d7373;
+  --color-neutral-500: #989090;
+  --color-neutral-600: #b3adad;
+  --color-neutral-700: #ccc7c7;
+  --color-neutral-800: #e7e4e4;
+  --color-neutral-900: #f3f2f2;
+  --color-primary-base: #5c1c70;
+  --color-primary-50: #220a29;
+  --color-primary-100: #40134e;
+  --color-primary-200: #621e76;
+  --color-primary-300: #80279b;
+  --color-primary-400: #9e30c0;
+  --color-primary-500: #b654d4;
+  --color-primary-600: #c981df;
+  --color-primary-700: #dba9ea;
+  --color-primary-800: #eed6f5;
+  --color-primary-900: #f6ebfa;
+  --color-secondary-base: #18337f;
+  --color-secondary-50: #08112b;
+  --color-secondary-100: #102151;
+  --color-secondary-200: #18327c;
+  --color-secondary-300: #1f42a3;
+  --color-secondary-400: #2652c9;
+  --color-secondary-500: #4b72dd;
+  --color-secondary-600: #7a97e6;
+  --color-secondary-700: #a5b8ee;
+  --color-secondary-800: #d4ddf7;
+  --color-secondary-900: #eaeefb;
+  --color-ternary-base: #2a9d8f;
+  --color-ternary-50: #0b2825;
+  --color-ternary-100: #144d46;
+  --color-ternary-200: #1f756b;
+  --color-ternary-300: #29998c;
+  --color-ternary-400: #32bdad;
+  --color-ternary-500: #56d2c4;
+  --color-ternary-600: #82ded3;
+  --color-ternary-700: #aae9e1;
+  --color-ternary-800: #d7f4f1;
+  --color-ternary-900: #ebfaf8;
+  --color-action-base: #cc6612;
+  --color-action-50: #331700;
+  --color-action-100: #612c00;
+  --color-action-200: #944300;
+  --color-action-300: #c25700;
+  --color-action-400: #f06c00;
+  --color-action-500: #f68a31;
+  --color-action-600: #f9a967;
+  --color-action-700: #fbc598;
+  --color-action-800: #fde3ce;
+  --color-action-900: #fef1e7;
+
+  --color-success-base: #22c55e;
+  --color-success-50: #072c15;
+  --color-success-100: #0e5327;
+  --color-success-200: #157e3c;
+  --color-success-300: #1ca64f;
+  --color-success-400: #23cd61;
+  --color-success-500: #48e080;
+  --color-success-600: #78e8a1;
+  --color-success-700: #a3efbf;
+  --color-success-800: #d3f8e1;
+  --color-success-900: #e9fbf0;
+  --color-warning-base: #f59e0b;
+  --color-warning-50: #332000;
+  --color-warning-100: #613d00;
+  --color-warning-200: #945e00;
+  --color-warning-300: #c27b00;
+  --color-warning-400: #f09800;
+  --color-warning-500: #f6ae31;
+  --color-warning-600: #f9c367;
+  --color-warning-700: #fbd798;
+  --color-warning-800: #fdecce;
+  --color-warning-900: #fef5e7;
+  --color-danger-base: #ef4444;
+  --color-danger-50: #330000;
+  --color-danger-100: #610000;
+  --color-danger-200: #940000;
+  --color-danger-300: #c20000;
+  --color-danger-400: #f00000;
+  --color-danger-500: #f63131;
+  --color-danger-600: #f96767;
+  --color-danger-700: #fb9898;
+  --color-danger-800: #fdcece;
+  --color-danger-900: #fee7e7;
+
+  /* === TERMINAL GREEN SPECTRUM === */
+  /* Full scale following existing pattern */
+  --color-terminal-base: #00ff41; /* CRT Phosphor P1 */
+  --color-terminal-50: #001a0a; /* Near-black with green tint */
+  --color-terminal-100: #003314; /* Very dark green */
+  --color-terminal-200: #004d1f; /* Dark green */
+  --color-terminal-300: #00662a; /* Medium-dark green */
+  --color-terminal-400: #00b328; /* Dim green (for disabled) */
+  --color-terminal-500: #00dd35; /* Dark emerald (inner glow) */
+  --color-terminal-600: #00ff41; /* Primary terminal green */
+  --color-terminal-700: #33ff66; /* Light green */
+  --color-terminal-800: #66ff88; /* Mint green (outer glow) */
+  --color-terminal-900: #ccffdd; /* Very light green */
+
+  /* === TERMINAL NEUTRAL SPECTRUM === */
+  /* Off-white spectrum for user text */
+  --color-terminal-neutral-base: #f0f0f0;
+  --color-terminal-neutral-50: #1a1a1a;
+  --color-terminal-neutral-100: #333333;
+  --color-terminal-neutral-200: #4d4d4d;
+  --color-terminal-neutral-300: #666666;
+  --color-terminal-neutral-400: #808080;
+  --color-terminal-neutral-500: #999999;
+  --color-terminal-neutral-600: #b3b3b3;
+  --color-terminal-neutral-700: #cccccc; /* Secondary glow */
+  --color-terminal-neutral-800: #e6e6e6;
+  --color-terminal-neutral-900: #f0f0f0; /* Primary user text */
+
+  /* === TERMINAL ACCENT SPECTRUM === */
+  /* Magenta for special cursor */
+  --color-terminal-accent-base: #ff00ff;
+  --color-terminal-accent-50: #330033;
+  --color-terminal-accent-100: #660066;
+  --color-terminal-accent-200: #990099;
+  --color-terminal-accent-300: #cc00cc;
+  --color-terminal-accent-400: #dd00dd; /* Inner glow */
+  --color-terminal-accent-500: #ff00ff; /* Primary magenta */
+  --color-terminal-accent-600: #ff33ff;
+  --color-terminal-accent-700: #ff66ff;
+  --color-terminal-accent-800: #ff88ff; /* Outer bloom */
+  --color-terminal-accent-900: #ffccff;
+
+  /* === SEMANTIC TERMINAL MAPPINGS === */
+
+  /* Terminal System Colors */
+  --terminal-bg: var(--color-background); /* #262625 */
+  --terminal-fg-system: var(--color-terminal-600); /* #00FF41 */
+  --terminal-fg-user: var(--color-terminal-neutral-900); /* #F0F0F0 */
+  --terminal-fg-dim: var(--color-terminal-neutral-700); /* #CCCCCC */
+  --terminal-white: #ffffff;
+
+  /* Terminal Interactive States */
+  --terminal-interactive: var(--color-terminal-600); /* Primary */
+  --terminal-interactive-hover: var(--color-terminal-800); /* Light */
+  --terminal-interactive-active: var(--color-terminal-500); /* Dark */
+  --terminal-interactive-disabled: var(--color-terminal-400); /* Dim */
+
+  /* Terminal Borders */
+  --terminal-border: var(--color-terminal-600);
+  --terminal-border-focus: var(--color-terminal-500);
+  --terminal-border-hover: var(--color-terminal-700);
+
+  /* Terminal Special */
+  --terminal-cursor: var(--color-terminal-600);
+  --terminal-cursor-special: var(--color-terminal-accent-500);
+
+  /* === TERMINAL GLOW EFFECTS === */
+
+  /* Green Glow System (3-layer) */
+  --glow-terminal-inner: 0 0 4px var(--color-terminal-500);
+  --glow-terminal-mid: 0 0 8px var(--color-terminal-800);
+  --glow-terminal-outer: 0 0 15px var(--color-terminal-800);
+  --glow-terminal-full: var(--glow-terminal-inner), var(--glow-terminal-mid);
+
+  /* White/Neutral Glow System */
+  --glow-neutral-inner: 0 0 2px var(--terminal-white);
+  --glow-neutral-outer: 0 0 6px var(--color-terminal-neutral-700);
+  --glow-neutral-full: var(--glow-neutral-inner), var(--glow-neutral-outer);
+
+  /* Interactive Glow (hover state) */
+  --glow-interactive: 0 0 20px var(--color-terminal-500);
+
+  /* Magenta Glow (special cursor) */
+  --glow-accent-inner: 0 0 4px var(--color-terminal-accent-400);
+  --glow-accent-outer: 0 0 8px var(--color-terminal-accent-800);
+  --glow-accent-full: var(--glow-accent-inner), var(--glow-accent-outer);
+
+  /* === OPACITY SCALES === */
+
+  --opacity-ghost: 0.02;
+  --opacity-subtle: 0.05;
+  --opacity-faint: 0.1;
+  --opacity-dim: 0.3;
+  --opacity-medium: 0.5;
+  --opacity-bright: 0.85;
+  --opacity-full: 1;
+
+  /* === TERMINAL SPACING & SIZING === */
+
+  /* Layout */
+  --terminal-max-width: 1024px;
+  --terminal-padding: 2rem;
+  --terminal-padding-mobile: 1rem;
+  --terminal-gap-sm: 12px;
+  --terminal-gap-md: 15px;
+  --terminal-gap-lg: 20px;
+  --terminal-gap-xl: 30px;
+
+  /* Interactive Elements */
+  --terminal-input-height: 45px;
+  --terminal-button-height: 45px;
+  --terminal-button-width-sm: 120px;
+  --terminal-button-width-md: 140px;
+  --terminal-icon-size: 40px;
+
+  /* Messages */
+  --terminal-message-max-width: 75%;
+  --terminal-message-padding: 16px 20px;
+  --terminal-message-gap: 25px;
+
+  /* === TYPOGRAPHY === */
+
+  /* Font Sizes */
+  --terminal-text-xs: 10px;
+  --terminal-text-sm: 11px;
+  --terminal-text-base: 13px;
+  --terminal-text-md: 14px;
+  --terminal-text-lg: 15px;
+  --terminal-text-xl: 16px;
+  --terminal-text-2xl: 18px;
+
+  /* Line Heights */
+  --terminal-leading-tight: 1.2;
+  --terminal-leading-normal: 1.5;
+  --terminal-leading-relaxed: 1.8;
+
+  /* Letter Spacing */
+  --terminal-tracking-tight: -0.02em;
+  --terminal-tracking-normal: 0;
+  --terminal-tracking-wide: 0.05em;
+  --terminal-tracking-wider: 0.1em;
+
+  /* Font Stacks */
+  --font-terminal: var(--font-jetbrains-mono, 'JetBrains Mono'), 'SF Mono', 'Monaco', 'Consolas', monospace;
+
+  /* Text Shadow Presets */
+  --terminal-text-shadow-system: var(--glow-terminal-full);
+  --terminal-text-shadow-user: var(--glow-neutral-full);
+  --terminal-text-shadow-accent: var(--glow-accent-full);
+  --terminal-text-shadow-none: none;
+
+  /* === ANIMATION TIMINGS === */
+
+  --terminal-duration-instant: 0.15s;
+  --terminal-duration-fast: 0.3s;
+  --terminal-duration-normal: 0.5s;
+  --terminal-duration-slow: 0.6s;
+  --terminal-duration-slower: 1s;
+
+  /* Easing Functions */
+  --terminal-ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --terminal-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --terminal-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* === BORDER RADIUS (CLIPPED CORNERS) === */
+
+  --terminal-radius-sm: 6px;
+  --terminal-radius-md: 8px;
+  --terminal-radius-lg: 12px;
+
+  /* Clip-path percentages for octagonal buttons */
+  --terminal-clip-tight: polygon(8% 0%, 92% 0%, 100% 25%, 100% 75%, 92% 100%, 8% 100%, 0% 75%, 0% 25%);
+  --terminal-clip-subtle: polygon(4% 0%, 96% 0%, 100% 20%, 100% 80%, 96% 100%, 4% 100%, 0% 80%, 0% 20%);
+  --terminal-clip-diamond: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+  /* === Z-INDEX LAYERS === */
+
+  --z-terminal-base: 1;
+  --z-terminal-content: 5;
+  --z-terminal-canvas: 6;
+  --z-terminal-labels: 7;
+  --z-terminal-flicker: 9;
+  --z-terminal-scanlines: 10;
+  --z-terminal-overlay: 15;
+  --z-terminal-input: 20;
+}
+
+/* === RESPONSIVE OVERRIDES === */
+
+@media (max-width: 768px) {
+  :root {
+    --terminal-padding: var(--terminal-padding-mobile);
+    --terminal-text-xs: 9px;
+    --terminal-text-sm: 10px;
+    --terminal-text-base: 12px;
+    --terminal-text-md: 13px;
+    --terminal-text-lg: 14px;
+    --terminal-text-xl: 15px;
+    --terminal-text-2xl: 16px;
+    --terminal-gap-sm: 10px;
+    --terminal-gap-md: 12px;
+    --terminal-gap-lg: 16px;
+    --terminal-gap-xl: 24px;
+    --terminal-button-width-sm: 100px;
+    --terminal-button-width-md: 120px;
+    --terminal-message-max-width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --terminal-padding: 0.75rem;
+    --terminal-text-xs: 8px;
+    --terminal-text-sm: 9px;
+    --terminal-text-base: 11px;
+    --terminal-text-md: 12px;
+    --terminal-text-lg: 13px;
+    --terminal-text-xl: 14px;
+    --terminal-text-2xl: 15px;
+    --terminal-gap-sm: 8px;
+    --terminal-gap-md: 10px;
+    --terminal-gap-lg: 12px;
+    --terminal-gap-xl: 20px;
+    --terminal-message-max-width: 90%;
+  }
+}
